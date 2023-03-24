@@ -1,5 +1,6 @@
 package com.fidexio.step_definitions;
 
+import com.fidexio.pages.BasePage;
 import com.fidexio.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
@@ -18,10 +19,15 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
+
+
     }
 
     @AfterAll
     public static void tearDown(){
         Driver.getDriver().close();
     }
+
+
+
 }
