@@ -4,10 +4,18 @@ import com.fidexio.pages.LoginPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.ConfigurationReader;
 import com.fidexio.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
+import java.util.Random;
 
 public class Fidexio_login_Definitions {
 
@@ -54,4 +62,9 @@ public class Fidexio_login_Definitions {
     }
 
 
+    @And("user should selects a vehicle")
+    public void userShouldSelectsAVehicle() {
+
+
+    }
 }

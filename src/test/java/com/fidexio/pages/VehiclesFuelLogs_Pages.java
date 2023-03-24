@@ -42,6 +42,13 @@ public class VehiclesFuelLogs_Pages {
     @FindBy(xpath = "//h4[normalize-space()='Create a Vehicle']")
     public WebElement createVehiclePopup;
 
+    @FindBy(xpath = "//h4[normalize-space()='Search: Vehicle']")
+    public WebElement vehicleList;
+
+    @FindBy(xpath = "//tbody[@class='ui-sortable']")
+    public WebElement listElement;
+
+
 
 
 }

@@ -60,8 +60,6 @@ public class VehiclesFuelLogs_Definition {
     }
 
 
-
-
     }
 
 
