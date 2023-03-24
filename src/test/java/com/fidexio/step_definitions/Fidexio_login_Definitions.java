@@ -1,5 +1,7 @@
 package com.fidexio.step_definitions;
 
+import com.fidexio.pages.BasePage;
+import com.fidexio.pages.FidexioPage;
 import com.fidexio.pages.LoginPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.ConfigurationReader;
@@ -9,9 +11,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Fidexio_login_Definitions {
+public class Fidexio_login_Definitions extends BasePage{
 
     LoginPage loginPage=new LoginPage();
+    FidexioPage fidexioPage=new FidexioPage();
 
     @Given("user is on the fidexio login  page")
     public void user_is_on_the_fidexio_login_page() {
@@ -22,6 +25,7 @@ public class Fidexio_login_Definitions {
     public void user_pos_enters_and_as_credentials(String username, String password) {
         loginPage.username.sendKeys(username);
         loginPage.password.sendKeys(password);
+
 
     }
 
@@ -37,21 +41,14 @@ public class Fidexio_login_Definitions {
       boolean checkProfile =loginPage.posProfileName.getText().contains("POS");
       Assert.assertTrue(checkProfile);
 
+
+
+
+
     }
 
-    @When("user\\(sales) enters {string} and {string} as credentials")
-    public void user_sales_enters_and_as_credentials(String username, String password) {
-        loginPage.username.sendKeys(username);
-        loginPage.password.sendKeys(password);
-    }
 
-    @Then("user\\(sales) is on the dashboard")
-    public void user_sales_is_on_the_dashboard() {
-        BrowserUtils.sleep(5);
-        Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
-        boolean checkProfile =loginPage.salesProfileName.getText().contains("Sales");
-        Assert.assertTrue(checkProfile);
-    }
+
 
 
 }
