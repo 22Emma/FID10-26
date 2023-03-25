@@ -82,8 +82,8 @@ Background:
                And users  clicks on create button and enters vehicle name and clicks to create button
                Then user enters model name and clicks to create button
                And user selects  make name and click to save button
-               And user enters licence plate and click to save button
-               Then user enters total price and clicks to save button
+               And user enters licence plate and click to save button.
+               Then user enters total price and clicks to save button.
                Then total price should be displayed as a float number.
 
 
