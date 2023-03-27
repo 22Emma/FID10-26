@@ -25,7 +25,7 @@ public class Customer_StepDefinitions extends BasePage {
     public void user_clicks_to_customers_from_order_section_and_land_on_the_customer_page() {
        BrowserUtils.sleep(5);
      customerPage.customersButton.click();
-     BrowserUtils.sleep(3);
+     BrowserUtils.sleep(5);
         Assert.assertTrue(customerPage.customerTitle.getText().equalsIgnoreCase("Customers"));
     }
 
@@ -36,29 +36,37 @@ public class Customer_StepDefinitions extends BasePage {
 
     @Then("user enters the name into the input box and clicks the create button.")
     public void user_enters_the_name_into_the_input_box_and_clicks_the_create_button() {
-       //BrowserUtils.sleep(3);
-    //customerPage.nameInput.sendKeys("Aabbuuw");
-    //customerPage.create2.click();
+       BrowserUtils.sleep(3);
+    customerPage.nameInput.sendKeys("Aabbuuw");
+    BrowserUtils.sleep(3);
+    customerPage.create2.click();
+    BrowserUtils.sleep(3);
 
     }
 
     @Then("create contacts should be display.")
     public void create_contacts_should_be_display() {
-
+       System.out.println("customerPage.contactPage.isDisplayed() = " + customerPage.contactPage.isDisplayed());
     }
 
     @Then("user enters the contact name into the contact name box.")
     public void user_enters_the_contact_name_into_the_contact_name_box() {
-
+       BrowserUtils.sleep(3);
+       customerPage.contactName.sendKeys("Aaaa");
+       BrowserUtils.sleep(3);
     }
 
     @Then("user clicks to the save&close button on the pop up")
     public void user_clicks_to_the_save_close_button_on_the_pop_up() {
+       BrowserUtils.sleep(2);
+       customerPage.saveCloseButton.click();
 
     }
 
     @Then("user clicks the save button on the top left side.")
     public void user_clicks_the_save_button_on_the_top_left_side() {
+       BrowserUtils.sleep(3);
+       customerPage.saveButton2.click();
 
     }
 
