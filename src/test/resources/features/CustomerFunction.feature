@@ -1,19 +1,22 @@
-Feature:1. Verify that all buttons work as expected at the Customers page
-  2. The user can create a customer with entering only Name input box.
-  3. User can upload the customer's picture and delete it.
-  4. After clicked the Save button, Edit button display instead of Save button and Create button display instead of Discard button.
-  5. After clicked the save button, the information of the customer which user entered should be displayed.
-  6. Verify that the user should be able to see created customer in the list of the customers after clicking the Customers module.
-  7. Verify that the "Contact created" message appears under full profile and customer's name is displayed on the page title.
+Feature:default
+  Background:
+    @wip
+     Scenario: User(sales-manager) can login with valid credentials
+    Given user is on the fidexio login  page
+    When user(sales) enters "salesmanager52@info.com" and "salesmanager" as credentials
+    And user clicks to login button
+    Then user(sales) is on the dashboard
+    Given user is on the fidexio home page and clicks to the sales option.
+      And user clicks to customers from order section and land on the customer page.
 
 
 
   Scenario: AC:1:Verify that all buttons work as expected at the Customers page
-    Given User is on the fidexio home page and clicks to the sales option.
-    And user clicks to customer from order section and land on the customer page.
+    Given user is on the fidexio home page and clicks to the sales option.
+    And user clicks to customers from order section and land on the customer page.
     Then create,import,kanban and list buttons are displayed and user is able click to them.
 
-
+  @wip
   Scenario: AC:2:The user can create a customer with entering only Name input box.
     Given user is on the fidexio home page and clicks to the sales option.
     And user clicks to customers from order section and land on the customer page.
@@ -29,7 +32,7 @@ Feature:1. Verify that all buttons work as expected at the Customers page
       And user clicks to customers from order section and land on the customer page.
       And user selects one of the customer from the customer page and clicks to it.
       Then user clicks to edit button.
-      And user hover overs on the profile picture and clicks to pencil/edit icon.
+      And user hover overs on the profile picture and clicks to pencil or edit icon.
       And user uploads a profile picture.
       Then user hover overs on the profile picture and clicks to bin icon.
 
@@ -66,7 +69,6 @@ Feature:1. Verify that all buttons work as expected at the Customers page
 
             Scenario: AC:7:Verify that the "Contact created" message appears under full profile and customer's name
             is displayed on the page title.
-
               Given user is on the fidexio home page and clicks to the sales option.
               And user clicks to customers from order section and land on the customer page.
               Then user clicks to create button.
