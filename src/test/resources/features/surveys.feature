@@ -12,9 +12,9 @@ Feature: Surveys
   @wip
   Scenario: User(posmanager) can login with valid credentials
     Given User is on the fidexio login  page
-    When User(sales) enters "posmanager66@info.com" and "posmanager" as credentials
-    And User clicks to login button
-    Then User(posmanager) is on the dashboard
+    When User(posmanager) enters "posmanager66@info.com" and "posmanager" as credentials
+    Then User clicks to login button
+
 Scenario: 1. Verify that all buttons work as expected at the survey design stage.
 
     Given user is on the posmanager66 page
