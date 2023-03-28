@@ -115,4 +115,45 @@ public class VehicleContractsStepDefinition {
         wait.until(ExpectedConditions.titleContains("Bmw/520ES/01adana01"));
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Bmw/520ES/01adana01"));
     }
+
+    @When("user enters a vehicle which is not on the vehicle list and clicks the save button")
+    public void userEntersAVehicleWhichIsNotOnTheVehicleListAndClicksTheSaveButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(VehicleContractsPage.VehicleDropDown));
+        VehicleContractsPage.VehicleDropDown.click();
+
+        VehicleContractsPage.VehicleDropDown.sendKeys("audi");
+        VehicleContractsPage.SaveBtn.click();
+
+
+    }
+
+    @Then("Create a Vehicle popup should be displayed.")
+    public void createAVehiclePopupShouldBeDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(VehicleContractsPage.CreateAVehicle));
+        Assert.assertTrue(VehicleContractsPage.CreateAVehicle.isDisplayed());
+
+    }
+
+    @Then("information of the Contract Details which user entered should be displayed.")
+    public void informationOfTheContractDetailsWhichUserEnteredShouldBeDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(VehicleContractsPage.ContractDetails));
+        Assert.assertTrue(VehicleContractsPage.ContractDetails.isDisplayed());
+    }
+
+    @Then("Edit button should be displayed instead of Save button")
+    public void editButtonShouldBeDisplayedInsteadOfSaveButton() {
+        wait.until(ExpectedConditions.visibilityOf(VehicleContractsPage.EditBtn));
+        Assert.assertTrue(VehicleContractsPage.EditBtn.isDisplayed());
+        
+        Assert.assertFalse(VehicleContractsPage.SaveBtn.isDisplayed());
+    }
+
+    @And("Create button should be displayed instead of Discard button.")
+    public void createButtonShouldBeDisplayedInsteadOfDiscardButton() {
+        wait.until(ExpectedConditions.visibilityOf(VehicleContractsPage.CreateBtn));
+        Assert.assertTrue(VehicleContractsPage.CreateBtn.isDisplayed());
+
+        Assert.assertFalse(VehicleContractsPage.DiscardBtn.isDisplayed());
+
+    }
 }
