@@ -4,6 +4,7 @@ import com.fidexio.pages.BasePage;
 import com.fidexio.pages.VehicleContractsPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -81,5 +82,37 @@ public class VehicleContractsStepDefinition {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Bmw/520ES/01adana01"));
     }
 
+    @And("user clicks save button")
+    public void userClicksSaveButton() {
 
+        VehicleContractsPage.SaveBtn.click();
+    }
+
+    @Then("user should not be able to create a contract without entering a vehicle")
+    public void userShouldNotBeAbleToCreateAContractWithoutEnteringAVehicle() {
+
+        wait.until(ExpectedConditions.visibilityOf(VehicleContractsPage.InvalidFieldNoti));
+        Assert.assertTrue(VehicleContractsPage.InvalidFieldNoti.isDisplayed());
+    }
+
+    @When("user chooses at least a vehicle")
+    public void userChoosesAtLeastAVehicle() {
+        wait.until(ExpectedConditions.elementToBeClickable(VehicleContractsPage.VehicleDropDown));
+        VehicleContractsPage.VehicleDropDown.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(VehicleContractsPage.VehicleDropDown1stOption));
+        VehicleContractsPage.VehicleDropDown1stOption.click();
+
+        wait.until(ExpectedConditions.textToBePresentInElementValue(VehicleContractsPage.VehicleDropDown,"Bmw/520ES/01adana01"));
+        Assert.assertEquals("Bmw/520ES/01adana01",VehicleContractsPage.VehicleDropDown.getAttribute("value"));
+
+    }
+
+    @Then("user should be able to create a contract")
+    public void userShouldBeAbleToCreateAContract() {
+
+        VehicleContractsPage.SaveBtn.click();
+        wait.until(ExpectedConditions.titleContains("Bmw/520ES/01adana01"));
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("Bmw/520ES/01adana01"));
+    }
 }

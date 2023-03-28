@@ -15,7 +15,7 @@ Feature: Vehicle Contracts Function
     And user clicks to login button
     Then user(pos) is on the dashboard
 
-  @wipenes
+
   Scenario: (AC-1) Verify that USER can create a new Contract. (User enters only Vehicle, Type, Activation Cost, Recurring Cost Amount)
     Given user is on the vehicle contract creation page
     When user clicks Create button
@@ -25,12 +25,16 @@ Feature: Vehicle Contracts Function
   @Negative
   Scenario: (AC-2) User must choose at least a Vehicle to create a Vehicle Contract.
     Given user is on the vehicle contract creation page
+    When user clicks Create button
+    And user clicks save button
     Then user should not be able to create a contract without entering a vehicle
 
-  @Positive
+  @Positive @wipenes
   Scenario: (AC-2) User must choose at least a Vehicle to create a Vehicle Contract.
     Given user is on the vehicle contract creation page
-    When user chooses at least a vehicle and clicks save button
+    When user clicks Create button
+    And user chooses at least a vehicle
+    And user clicks save button
     Then user should be able to create a contract
 
   Scenario: (AC-3) If user tries to enter a vehicle which is not on the Vehicle list and click the save button, Create a Vehicle popup should be displayed.
