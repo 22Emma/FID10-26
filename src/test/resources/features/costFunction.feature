@@ -12,8 +12,8 @@ Background:
 @wip
   Scenario: AC1: Verify that USER can create a new vehicle costs
 
-    And users  clicks on create button and enters vehicle name and clicks to enter
-    And user  enters model name on model input and click to enter
+    And users  clicks on create button and enters vehicle name and clicks to create button
+    And user  enters model name on model input and click to create button
     And user enters make name and clicks save button
     And user enters licence plate and click to save button
     Then user enters total price and clicks to save button

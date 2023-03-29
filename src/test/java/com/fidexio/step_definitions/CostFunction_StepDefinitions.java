@@ -32,9 +32,9 @@ public class CostFunction_StepDefinitions extends BasePage {
 
     }
 
-    //user enters model name and clicks to empty space and click enter button
-    @Given("users  clicks on create button and enters vehicle name and clicks to enter")
-    public void users_clicks_on_create_button_and_enters_vehicle_name_and_clicks_to_enter() {
+
+    @Given("users  clicks on create button and enters vehicle name and clicks to create button")
+    public void users_clicks_on_create_button_and_enters_vehicle_name_and_clicks_to_create_button() {
         BrowserUtils.sleep(10);
         costFunctionPage.createButton.click();
         BrowserUtils.sleep(1);
@@ -55,25 +55,30 @@ public class CostFunction_StepDefinitions extends BasePage {
 
     @And("user enters make name and clicks save button")
     public void userEntersMakeNameAndClicksSaveButton() {
-
-    }
-
-    @Then("user  enters model name on model input and click to enter")
-    public void user_enters_model_name_on_model_input_and_click_to_enter() {
-
-        costFunctionPage.modelName.sendKeys("dsadskj");
-        BrowserUtils.sleep(1);
-        costFunctionPage.createVehicleCreateButton.click();
-        costFunctionPage.makeButton.sendKeys("salla");
-        BrowserUtils.sleep(2);
         costFunctionPage.makeButton.sendKeys(Keys.ENTER);
         costFunctionPage.createModelSaveButton.click();
+    }
+
+    @Then("user  enters model name on model input and click to create button")
+    public void user_enters_model_name_on_model_input_and_click_to_create_button() {
+
+        costFunctionPage.modelName.sendKeys("dsadskj]");
+        BrowserUtils.sleep(4);
+        costFunctionPage.createVehicleCreateButton.click();
+        costFunctionPage.makeButton.sendKeys("tesla",Keys.ENTER);
+        BrowserUtils.sleep(4);
+        costFunctionPage.MakeSave.click();
+
+
 
 
     }
 
     @Then("user enters licence plate and click to save button.")
     public void user_enters_licence_plate_and_click_to_save_button() {
+    costFunctionPage.licencePlate.sendKeys("salla123");
+    BrowserUtils.sleep(3);
+    costFunctionPage.MakeSave.click();
 
 
     }

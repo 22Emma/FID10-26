@@ -63,4 +63,12 @@ public class CostFunctionPage {
     @FindBy(xpath = "(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content'])[1]")
     public WebElement acababune;
 
+    @FindBy(xpath = "//h2/input[@class='o_field_char o_field_widget o_input o_required_modifier oe_inline']")
+    public WebElement licencePlate;
+
+    @FindBy (xpath = "//button[@class='btn btn-sm btn-primary']")
+    public WebElement vehichleSave;
+
+    @FindBy (xpath = "(//button//span)[28]")
+    public WebElement MakeSave;
 }
