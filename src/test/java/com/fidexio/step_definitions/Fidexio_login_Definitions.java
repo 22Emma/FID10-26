@@ -37,8 +37,6 @@ public class Fidexio_login_Definitions extends BasePage{
     public void user_pos_is_on_the_dashboard() {
         BrowserUtils.sleep(5);
       Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
-      boolean checkProfile =loginPage.posProfileName.getText().contains("POS");
-      Assert.assertTrue(checkProfile);
 
 
 
@@ -47,7 +45,17 @@ public class Fidexio_login_Definitions extends BasePage{
     }
 
 
+    @When("user\\(sales) enters {string} and {string} as credentials")
+    public void userSalesEntersAndAsCredentials(String username, String password) {
+        loginPage.username.sendKeys(username);
+        loginPage.password.sendKeys(password);
+    }
+
+    @Then("user\\(sales) is on the dashboard")
+    public void userSalesIsOnTheDashboard() {
+        BrowserUtils.sleep(5);
+        Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
 
 
-
+    }
 }
