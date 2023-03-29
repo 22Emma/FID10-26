@@ -52,7 +52,7 @@ Feature: Vehicle Contracts Function
     And user clicks save button
     Then information of the Contract Details which user entered should be displayed.
 
-  @wipenes
+
   Scenario: (AC-5) 5. After clicked the Save button, Edit button display instead of Save button and Create button display instead of Discard button.
     Given user is on the vehicle contract creation page
     And user clicks Create button
@@ -61,14 +61,20 @@ Feature: Vehicle Contracts Function
     Then Edit button should be displayed instead of Save button
     And Create button should be displayed instead of Discard button.
 
+
   Scenario: (AC-6) When user clicks the Edit button the form should open by displaying the all the information and it be ready to edit.
     Given user is on the vehicle contract creation page
-    Then user enters information for contract details and clicks the save button
+    And user clicks Create button
+    And user enters a vehicle, contract type, activation cost and recurring cost amount
+    And user clicks save button
     And user clicks the edit button
     Then form should open by displaying the all the information and it be ready to edit
 
+  @wipenes
   Scenario Outline: (AC-7) User should be able to enter only number in the Activation Cost input box. And it should be displayed as a float number.
     Given user is on the vehicle contract creation page
+    And user clicks Create button
+    And user enters a vehicle, contract type and recurring cost amount
     When user enters "<Activation cost>"
     Then only numbers should be accepted as activation cost
     And numbers should be displayed as a float number
@@ -77,6 +83,8 @@ Feature: Vehicle Contracts Function
       | invalid entry   |
       | 5               |
 
+
   Scenario: (AC-8) Service Type should display as Leasing by default.
     Given user is on the vehicle contract creation page
+    And user clicks Create button
     Then Service Type should be display as Leasing by default

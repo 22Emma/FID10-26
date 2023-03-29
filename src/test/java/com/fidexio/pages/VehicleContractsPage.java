@@ -53,4 +53,7 @@ public class VehicleContractsPage extends BasePage{
 
     @FindBy (xpath = "//button[normalize-space(.)='Discard']")
     public WebElement DiscardBtn;
+
+    @FindBy (xpath = "(//span[@class='o_field_float o_field_number o_field_widget'])[1]")
+    public WebElement ActivationCostSaved;
 }
