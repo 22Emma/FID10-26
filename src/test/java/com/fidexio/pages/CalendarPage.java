@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FidexioPage {
+public class CalendarPage {
 
-    public FidexioPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public CalendarPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//button[.='Day']")
@@ -32,13 +32,24 @@ public class FidexioPage {
     @FindBy(xpath = "//button[.='Create']")
     public WebElement createButton;
 
-      @FindBy(xpath = "//button[.='Edit']")
+    @FindBy(xpath = "//button[.='Edit']")
     public WebElement editButton;
 
-      @FindBy(xpath = "//button[.='Cancel']")
+    @FindBy(xpath = "//button[.='Cancel']")
     public WebElement cancelButton;
 
+    @FindBy(xpath = "//li[.='Meetings (Week 12)']")
+    public WebElement weekTitle;
 
+    @FindBy(xpath = "//li[.='Meetings (March 25, 2023)']")
+    public WebElement dayTitle;
+
+    @FindBy(xpath = "//li[.='Meetings (March 2023)']")
+    public WebElement monthTitle;
+
+
+   // @FindBy(xpath = "//div[@class='fc-view-container']/div[1]/table/thead/tr/td/div/table/thead/tr/th[4]")
+    //   //div[@class='fc-view-container']/div[1]/table/tbody/tr/td/div[2]/div/div[3]
 
 
 }
