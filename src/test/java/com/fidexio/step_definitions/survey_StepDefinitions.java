@@ -1,5 +1,6 @@
 package com.fidexio.step_definitions;
 
+import com.fidexio.pages.BasePage;
 import com.fidexio.pages.LoginPage;
 import com.fidexio.pages.SurveysPage;
 import com.fidexio.utilities.ConfigurationReader;
@@ -10,27 +11,24 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class survey_StepDefinitions {
+public class survey_StepDefinitions  extends BasePage {
     SurveysPage SurveysPage =new SurveysPage();
-    @Given("User is on the fidexio login  page")
-    public void userIsOnTheFidexioLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
-    }
-
-    @When("User\\(posmanager) enters {string} and {string} as credentials")
-    public void userPosmanagerEntersAndAsCredentials(String username, String password) {
-        SurveysPage.username66.sendKeys(username);
-        SurveysPage.password66.sendKeys(password);
-    }
-
-    @Then("User clicks to login button")
-    public void userClicksToLoginButton() {
-        SurveysPage.loginBtn.click();
+    @Given("user is on the home  page clicks to the surveys options")
+    public void userIsOnTheHomePageClicksToTheSurveysOptions() {
+        sectionSurveys.click();
     }
 
 
+    @And("user in on Surveys page")
+    public void userInOnSurveysPage() {
 
-
+        Assert.assertEquals("Surveys-Odoo",Driver.getDriver().getTitle());
 
     }
+
+    @Then("create,import are displayed and user is able click to them.")
+    public void createImportAreDisplayedAndUserIsAbleClickToThem() {
+
+    }
+}
