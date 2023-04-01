@@ -24,9 +24,8 @@ Feature: Fidexio Vehicle Service Logs functionality
 
 
   Scenario: 1: Verify that USER can create a new Vehicles Services Logs
-    When user is on the fidexio vehicles services logs page
+    Given user is on the fidexio vehicles services logs page
     And user clicks the create button
-    And user enters vehicle name and clicks the create button
     Then user selects a vehicle
     And user enters the total price fee and clicks the save button
     Then user should see their vehicles service log

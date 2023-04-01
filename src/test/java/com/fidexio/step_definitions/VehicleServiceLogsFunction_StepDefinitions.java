@@ -40,61 +40,25 @@ public class VehicleServiceLogsFunction_StepDefinitions {
 
     }
 
-    @When("user is on the fidexio vehicles services logs page")
+    @Given("user is on the fidexio vehicles services logs page")
     public void userIsOnTheFidexioVehiclesServicesLogsPage() {
+
+        Assert.assertEquals("Vehicles Services Logs - Odoo",Driver.getDriver().getTitle());
+
     }
 
     @And("user clicks the create button")
     public void userClicksTheCreateButton() {
+
+        vehiclesServiceLogPage.createButton.click();
+
     }
 
-    @And("user enters vehicle name and clicks the create button")
-    public void userEntersVehicleNameAndClicksTheCreateButton() {
-    }
 
     @Then("user selects a vehicle")
     public void userSelectsAVehicle() {
     }
 
-    @And("user enters the total price fee and clicks the save button")
-    public void userEntersTheTotalPriceFeeAndClicksTheSaveButton() {
-    }
 
-    @Then("user should see their vehicles service log")
-    public void userShouldSeeTheirVehiclesServiceLog() {
-    }
-
-    @Then("user enters a vehicle not on the dropdown list")
-    public void userEntersAVehicleNotOnTheDropdownList() {
-    }
-
-    @And("user clicks the save button")
-    public void userClicksTheSaveButton() {
-    }
-
-
-    @Then("create a vehicle popup should be displayed")
-    public void createAVehiclePopupShouldBeDisplayed() {
-    }
-
-    @Then("user should see the edit button")
-    public void userShouldSeeTheEditButton() {
-    }
-
-    @And("user clicks the edit button")
-    public void userClicksTheEditButton() {
-    }
-
-    @Then("user should be able to see all the information and be able to edit it")
-    public void userShouldBeAbleToSeeAllTheInformationAndBeAbleToEditIt() {
-    }
-
-    @Then("total price should be displayed as a number")
-    public void totalPriceShouldBeDisplayedAsANumber() {
-    }
-
-    @Then("service type is displayed as repair and maintenance by default")
-    public void serviceTypeIsDisplayedAsRepairAndMaintenanceByDefault() {
-    }
 
 }
