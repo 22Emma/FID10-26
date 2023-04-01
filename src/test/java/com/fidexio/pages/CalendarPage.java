@@ -38,18 +38,42 @@ public class CalendarPage {
     @FindBy(xpath = "//button[.='Cancel']")
     public WebElement cancelButton;
 
-    @FindBy(xpath = "//li[.='Meetings (Week 12)']")
+    @FindBy(xpath = "//li[.='Meetings (Week 13)']")
     public WebElement weekTitle;
 
-    @FindBy(xpath = "//li[.='Meetings (March 25, 2023)']")
+    @FindBy(xpath = "//ol//li")
     public WebElement dayTitle;
 
-    @FindBy(xpath = "//li[.='Meetings (March 2023)']")
+    @FindBy(xpath = "//li[.='Meetings (April 2023)']")
     public WebElement monthTitle;
 
 
    // @FindBy(xpath = "//div[@class='fc-view-container']/div[1]/table/thead/tr/td/div/table/thead/tr/th[4]")
     //   //div[@class='fc-view-container']/div[1]/table/tbody/tr/td/div[2]/div/div[3]
+
+    @FindBy(xpath = "//td[.='All day']/following-sibling::td[1]")
+    public WebElement allSectionFirstDay;
+
+    @FindBy(xpath = "//td[@class='fc-event-container']")
+    public WebElement createdEvent;
+
+    @FindBy(xpath = "//button[.='Delete']")
+    public WebElement deleteButton;
+
+      @FindBy(xpath = "//button[.='Ok']")
+    public WebElement okButton;
+
+      @FindBy(xpath = "//h4")
+    public WebElement editPopUpTitle;
+
+    @FindBy(xpath = "//button[.='Close']")
+    public WebElement closePopup;
+
+    @FindBy(xpath = "//input[@placeholder=\"e.g. Business Lunch\"]")
+    public WebElement changeName;
+
+    @FindBy(xpath = "(//button[.='Save'])[2]")
+    public WebElement saveButton;
 
 
 }

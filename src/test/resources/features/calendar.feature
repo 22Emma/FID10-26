@@ -7,44 +7,45 @@ Feature:
   5. User can edit a created event
 
   @Background:
-    @wip
-    Scenario:
-  Given user is on the fidexio login  page
+  @wipEmma
+  Scenario:
+    Given user is on the fidexio login  page
     When user(pos) enters "posmanager54@info.com" and "posmanager" as credentials
     And user clicks to login button
     Then user(pos) is on the dashboard
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
 
-
+  @wipEmma
   Scenario:AC:1 User first lands on weekly display
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
 
-
+  @wipEmma
   Scenario:AC:2 User can change display between Day-Week-Month
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
     And User can switch between day, week and month sections.
 
-
+  @wipEmma
   Scenario:AC:3 User can create event by clicking on time box
-    Given User is on fidexio homepage and user clicks to Calender section.
-    When User is on the calender section and weekly display is displayed by default
-    And User can click on the time box and create new event.
-
-  Scenario:AC:4 User can see event details when click the event on the calendar.
-    Given User is on fidexio homepage and user clicks to Calender section.
-    When User is on the calender section and weekly display is displayed by default
-    And User can click on the time box and create new event.
-    Then User can see event details by clicking the event.
-
-
-  Scenario:AC:5 User can edit a created event
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
     And User can click on the time box and create new event.
+
+  @wipEmma
+  Scenario:AC:4 User can see event details when click the event on the calendar.
+    Given User is on fidexio homepage and user clicks to Calendar section.
+    When User is on the calender section and weekly display is displayed by default
+    And User can click on the time box and create new events.
     Then User can see event details by clicking the event.
+
+  @wipEmma
+  Scenario:AC:5 User can edit a created event
+    Given User is on fidexio homepage and user clicks to Calendar section.
+    When User is on the calender section and weekly display is displayed by default
+    And User can click on the time box and create new events.
+    Then User can see event details by clicking the events.
     And User can edit the created event details.
 
 
