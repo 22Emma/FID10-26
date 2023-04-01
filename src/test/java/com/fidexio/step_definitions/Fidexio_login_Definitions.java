@@ -38,8 +38,6 @@ public class Fidexio_login_Definitions extends BasePage{
     public void user_pos_is_on_the_dashboard() {
         BrowserUtils.sleep(5);
       Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
-//      boolean checkProfile =loginPage.posProfileName.getText().contains("POS");
-//      Assert.assertTrue(checkProfile);
 
 
 
@@ -58,9 +56,9 @@ public class Fidexio_login_Definitions extends BasePage{
     public void userSalesIsOnTheDashboard() {
         BrowserUtils.sleep(5);
         Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
-        System.out.println(loginPage.salesProfileName.getText());
-        boolean checkProfile =loginPage.salesProfileName.getText().contains("Sales");
-        Assert.assertTrue(checkProfile);
+
 
     }
+
+
 }

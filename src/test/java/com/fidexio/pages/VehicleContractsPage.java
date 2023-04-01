@@ -39,4 +39,21 @@ public class VehicleContractsPage extends BasePage{
     @FindBy (xpath = "//button[normalize-space(.)='Save']")
     public WebElement SaveBtn;
 
+    @FindBy (xpath = "//div[@class='o_notification_title']")
+    public WebElement InvalidFieldNoti;
+
+    @FindBy (xpath = "//h4[@class='modal-title']")
+    public WebElement CreateAVehicle;
+
+    @FindBy (xpath = "(//div[@class='o_horizontal_separator'])[1]")
+    public WebElement ContractDetails;
+
+    @FindBy (xpath = "//button[normalize-space(.)='Edit']")
+    public WebElement EditBtn;
+
+    @FindBy (xpath = "//button[normalize-space(.)='Discard']")
+    public WebElement DiscardBtn;
+
+    @FindBy (xpath = "(//span[@class='o_field_float o_field_number o_field_widget'])[1]")
+    public WebElement ActivationCostSaved;
 }
