@@ -10,17 +10,14 @@ public class SurveysPage {
     public SurveysPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(id = "login")
-    public WebElement username66;
-
-    @FindBy(id = "password")
-    public WebElement password66;
-
-    @FindBy(xpath = "//button[.='Log in']")
-    public WebElement loginBtn;
 
 
     @FindBy(xpath = "//span[.='POSManager66']")
     public WebElement PosManager66Page;
+
+    @FindBy(xpath="/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
+    public WebElement CreateBtn;
+    @FindBy(xpath="/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[2]")
+    public  WebElement ImportBtn;
 
 }

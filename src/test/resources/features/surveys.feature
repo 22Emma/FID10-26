@@ -9,13 +9,13 @@ Feature: Surveys
   8. Verify that the user should be able to see created survey is listed after clicking the Surveys module.
 
   Background:
-  @wip
+  @mstf
   Scenario: User(pos-manager) can login with valid credentials
     Given user is on the fidexio login  page
     When user(pos) enters "posmanager66@info.com" and "posmanager" as credentials
     And user clicks to login button
     Then user(pos) is on the dashboard
-
+   @mstf1
   Scenario: 1. Verify that all buttons work as expected at the survey design stage.
 
     Given user is on the home  page clicks to the surveys options
@@ -42,19 +42,19 @@ Feature: Surveys
       And User clicks to Create buttons
       And User must enter a survey title to create a survey.
       And  User click to Save button
-      And "Attachment(s)" buttons should be displayed.
-      And "Action" buttons should be displayed.
-      And "Test Survey" buttons should be displayed.
-      And "Print Survey" buttons should be displayed.
-      And "Share and invite by email" buttons should be displayed.
-      Then  "View result" buttons should be displayed.
+      And Attachment(s) buttons should be displayed.
+      And Action buttons should be displayed.
+      And Test Survey buttons should be displayed.
+      And Print Survey buttons should be displayed.
+      And Share and invite by email buttons should be displayed.
+      Then  View result buttons should be displayed.
       Scenario: 5. After clicked the Save button, "Add an item" should be not displayed.
         When user is on the home  page clicks to the surveys options
         And user in on Surveys page
         And User clicks to Create buttons
         And User must enter a survey title to create a survey.
         And  User click to Save button
-        Then "Add an item" should be not displayed.
+        Then Add an item should be not displayed.
         Scenario: 6. User can choose "User can come back in the previous page"
         and/or "Login required" under the Options tab.
         then user is on the posmanager66 page
