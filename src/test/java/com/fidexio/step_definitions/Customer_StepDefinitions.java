@@ -2,12 +2,21 @@ package com.fidexio.step_definitions;
 
 import com.fidexio.pages.BasePage;
 import com.fidexio.pages.CustomerPage;
+import com.fidexio.pages.FidexioPage;
+import com.fidexio.pages.LoginPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 
 public class Customer_StepDefinitions extends BasePage {
 
@@ -72,49 +81,82 @@ public class Customer_StepDefinitions extends BasePage {
 
     @Then("{string} message appears under full profile and customer's name is displayed on the page title.")
     public void message_appears_under_full_profile_and_customer_s_name_is_displayed_on_the_page_title(String string) {
-
+       BrowserUtils.sleep(3);
+       System.out.println("customerPage.contactCreated.isDisplayed() = " + customerPage.contactCreated.isDisplayed());
     }
 
 
     @Then("user sees the created customer on the list.")
     public void userSeesTheCreatedCustomerOnTheList() {
-
+       System.out.println("customerPage.customerIsOnThePage.isDisplayed() = " + customerPage.customerIsOnThePage.isDisplayed());
     }
 
     @Then("information of the customer is displayed.")
     public void informationOfTheCustomerIsDisplayed() {
-
+       BrowserUtils.sleep(3);
+       System.out.println("customerPage.customerInfo.isDisplayed() = " + customerPage.customerInfo.isDisplayed());
     }
 
     @And("create button is displayed instead of discard button.")
     public void createButtonIsDisplayedInsteadOfDiscardButton() {
-
+       BrowserUtils.sleep(3);
+       System.out.println("customerPage.createButtonInsteadOfDiscard.isDisplayed() = " + customerPage.createButtonInsteadOfDiscard.isDisplayed());
     }
 
     @Then("edit button is displayed instead of save button")
     public void editButtonIsDisplayedInsteadOfSaveButton() {
-
+       BrowserUtils.sleep(3);
+       System.out.println("customerPage.editButton.isDisplayed() = " + customerPage.editButton.isDisplayed());
     }
 
     @Then("user hover overs on the profile picture and clicks to bin icon.")
     public void userHoverOversOnTheProfilePictureAndClicksToBinIcon() {
-
+        BrowserUtils.sleep(5);
+        customerPage.clearButton.click();
     }
 
     @And("user uploads a profile picture.")
-    public void userUploadsAProfilePicture() {
+    public void userUploadsAProfilePicture()  {
+
+       customerPage.editPencilOnPicture.click();
+
+       String filePath = "C:\\Users\\nilyc\\OneDrive\\Desktop\\resim1.png";
+
+       WebElement upload = Driver.getDriver().findElement(By.xpath("(//input[@name='ufile'])[2]"));
+
+       upload.sendKeys(filePath);
+
+       BrowserUtils.sleep(3);
+
+       //customerPage.saveButton.sendKeys(Keys.ENTER);
+
+       //StringSelection s = new StringSelection("C:\\Users\\nilyc\\OneDrive\\Desktop\\resim1.png");
+       // Clipboard copy
+       //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);
+
+       //Robot robot = new Robot();
+       //robot.delay(250);
+       //robot.keyPress(KeyEvent.VK_CONTROL);
+       //robot.keyPress(KeyEvent.VK_V);
+       //robot.keyRelease(KeyEvent.VK_V);
+       //robot.keyRelease(KeyEvent.VK_CONTROL);
+       //robot.keyPress(KeyEvent.VK_ENTER);
+       //robot.delay(100);
+       //robot.keyRelease(KeyEvent.VK_ENTER);
 
     }
 
 
     @Then("user clicks to edit button.")
     public void userClicksToEditButton() {
-
+        BrowserUtils.sleep(3);
+    customerPage.editButton.click();
     }
 
     @And("user selects one of the customer from the customer page and clicks to it.")
     public void userSelectsOneOfTheCustomerFromTheCustomerPageAndClicksToIt() {
 
+       customerPage.customer1.click();
     }
 
     @Then("create,import,kanban and list buttons are displayed and user is able click to them.")
@@ -137,5 +179,12 @@ public class Customer_StepDefinitions extends BasePage {
 
     @And("user hover overs on the profile picture and clicks to pencil or edit icon.")
     public void userHoverOversOnTheProfilePictureAndClicksToPencilEditIcon() {
+       customerPage.editPencilOnPicture.click();
+    }
+
+    @Then("user clicks to  save button for uploaded picture .")
+    public void userClicksToSaveButtonForUploadedPicture() {
+       //BrowserUtils.sleep(3);
+        //customerPage.saveButton.click();
     }
 }

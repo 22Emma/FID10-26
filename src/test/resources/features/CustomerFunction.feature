@@ -16,7 +16,7 @@ Feature:default
     And user clicks to customers from order section and land on the customer page.
     Then create,import,kanban and list buttons are displayed and user is able click to them.
 
-  @wip
+
   Scenario: AC:2:The user can create a customer with entering only Name input box.
     Given user is on the fidexio home page and clicks to the sales option.
     And user clicks to customers from order section and land on the customer page.
@@ -35,6 +35,7 @@ Feature:default
       And user hover overs on the profile picture and clicks to pencil or edit icon.
       And user uploads a profile picture.
       Then user hover overs on the profile picture and clicks to bin icon.
+      Then  user clicks to  save button for uploaded picture .
 
       Scenario: AC:4:After clicked the Save button, Edit button display instead of Save button and Create
       button display instead of Discard button.
