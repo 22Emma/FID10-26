@@ -62,9 +62,11 @@ public class Fidexio_login_Definitions {
     }
 
 
-    @And("user should selects a vehicle")
-    public void userShouldSelectsAVehicle() {
-
+    @When("user enter number in the Odometer Value input box.")
+    public void userEnterNumberInTheOdometerValueInputBox() {
 
     }
+
+
 }
+
