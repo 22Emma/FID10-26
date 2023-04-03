@@ -19,18 +19,15 @@ Feature: Surveys
   Scenario: 1. Verify that all buttons work as expected at the survey design stage.
 
     Given user is on the home  page clicks to the surveys options
-     And user in on Surveys page
     Then create,import are displayed and user is able click to them.
   Scenario: User must enter a survey title to create a survey.
     When user is on the home  page clicks to the surveys options
-    And user in on Surveys page
     And User clicks to Create buttons
     And User must enter a survey title to create a survey.
     Then User click to Save button
   Scenario: 3. After clicked the Save button, Edit button display instead of Save button
   and Create button display instead of Discard button.
     When user is on the home  page clicks to the surveys options
-    And user in on Surveys page
     And User clicks to Create buttons
     And User must enter a survey title to create a survey.
     And  User click to Save button
@@ -38,7 +35,6 @@ Feature: Surveys
     Scenario: 4. After clicked the Save button, "Attachment(s)", "Action", "Test Survey", "Print Survey", "Share and invite by email" and
     "View result" buttons should be displayed.
       When user is on the home  page clicks to the surveys options
-      And user in on Surveys page
       And User clicks to Create buttons
       And User must enter a survey title to create a survey.
       And  User click to Save button
@@ -50,7 +46,6 @@ Feature: Surveys
       Then  View result buttons should be displayed.
       Scenario: 5. After clicked the Save button, "Add an item" should be not displayed.
         When user is on the home  page clicks to the surveys options
-        And user in on Surveys page
         And User clicks to Create buttons
         And User must enter a survey title to create a survey.
         And  User click to Save button
@@ -59,20 +54,17 @@ Feature: Surveys
         and/or "Login required" under the Options tab.
         then user is on the posmanager66 page
           When user is on the home  page clicks to the surveys options
-          And user in on Surveys page
           And User must enter a survey title to create a survey.
           And  User click to Save button
           Then  User can choose "User can come back in the previous page
           Scenario: 7. "Survey created" message should be displayed under the survey form sheet,
           after clicked the save button.
             When user is on the home  page clicks to the surveys options
-            And user in on Surveys page
             And User clicks to Create buttons
             And User must enter a survey title to create a survey.
             And  User click to Save button
-            Then "Survey created" message should be displayed under the survey form sheet,
+            Then Survey created message should be displayed under the survey form sheet,
             Scenario: 8. Verify that the user should be able to see created survey is listed
             after clicking the Surveys module.
               When user is on the home  page clicks to the surveys options
-              And user in on Surveys page
-              And Verify that the user should be able to see created survey is listed
+              And Verify that the user should be able to s ee created survey is listed

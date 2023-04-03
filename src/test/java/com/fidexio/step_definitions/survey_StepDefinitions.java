@@ -23,32 +23,33 @@ public class survey_StepDefinitions  extends BasePage {
     }
 
 
-    @And("user in on Surveys page")
-    public void userInOnSurveysPage() {
-        BrowserUtils.sleep(10);
-        Assert.assertEquals("Surveys-Odoo",Driver.getDriver().getTitle());
-
-    }
 
     @Then("create,import are displayed and user is able click to them.")
     public void createImportAreDisplayedAndUserIsAbleClickToThem() {
+        BrowserUtils.sleep(5);
        Assert.assertTrue(SurveysPage.CreateBtn.isDisplayed());
-        System.out.println("SurveysPage.CreateBtn.isDisplayed() = " + SurveysPage.CreateBtn.isDisplayed());
+        BrowserUtils.sleep(5);
       Assert.assertTrue(SurveysPage.ImportBtn.isDisplayed());
-        System.out.println("SurveysPage.ImportBtn.isDisplayed() = " + SurveysPage.ImportBtn.isDisplayed());
+
     }
     @When("User clicks to Create buttons")
     public void user_clicks_to_create_buttons() {
+        BrowserUtils.sleep(5);
         SurveysPage.CreateBtn.click();
 
     }
     @When("User must enter a survey title to create a survey.")
     public void user_must_enter_a_survey_title_to_create_a_survey() {
+        BrowserUtils.sleep(5);
+     SurveysPage.SurveyTitle.sendKeys("FirstSurvey");
 
     }
 
     @Then("User click to Save button")
     public void user_click_to_save_button() {
+        BrowserUtils.sleep(5);
+        SurveysPage.SaveBtn.click();
+        Assert.assertTrue(SurveysPage.SrvyCreated.isDisplayed());
 
     }
 

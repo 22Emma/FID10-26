@@ -14,10 +14,20 @@ public class SurveysPage {
 
     @FindBy(xpath = "//span[.='POSManager66']")
     public WebElement PosManager66Page;
+    @FindBy(xpath = "/html/head/title")
+    public WebElement TitleName;
 
-    @FindBy(xpath="/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
+    @FindBy(xpath="//button[@accesskey='c']")
     public WebElement CreateBtn;
-    @FindBy(xpath="/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[2]")
+    @FindBy(xpath="//button[@class='btn btn-sm btn-default o_button_import']")
     public  WebElement ImportBtn;
+
+    @FindBy(xpath = "//input[@placeholder='Survey Title']")
+    public WebElement SurveyTitle;
+    @FindBy(xpath="//button[@accesskey='s']")
+    public WebElement SaveBtn;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[2]/div[2]/div")
+    public WebElement SrvyCreated;
 
 }
