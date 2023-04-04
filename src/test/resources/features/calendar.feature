@@ -6,9 +6,7 @@ Feature:
   4. User can see event details when click the event on the calander.
   5. User can edit a created event
 
-  @Background:
-  @wipEmma
-  Scenario:
+  Background:
     Given user is on the fidexio login  page
     When user(pos) enters "posmanager54@info.com" and "posmanager" as credentials
     And user clicks to login button
@@ -16,7 +14,7 @@ Feature:
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
 
-  @wipEmma
+  @wipEmma1
   Scenario:AC:1 User first lands on weekly display
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
