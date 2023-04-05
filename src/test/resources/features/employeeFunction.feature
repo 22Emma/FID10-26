@@ -33,6 +33,7 @@ Feature: Employee Functionality
     When user clicks Kanban button
     Then user should see Employee information as a Kanban
 
+    @smoke
   Scenario: The user can create an employee with entering only Name input box and verify that the "Employee created" message appears under full profile
     When user clicks Create button on employee page
     And user should enter "Sebnem SONMEZ"
