@@ -58,6 +58,7 @@ Feature: Surveys
         and/or "Login required" under the Options tab.
        then user is on the posmanager66 page
          When user is on the home  page clicks to the surveys options
+          And user clicks to the Create button
           And User must enter a survey title to create a survey.
          And  User click to Save button
          #Then  User can choose "User can come back in the previous page
