@@ -128,21 +128,6 @@ public class Customer_StepDefinitions extends BasePage {
 
        BrowserUtils.sleep(3);
 
-       //customerPage.saveButton.sendKeys(Keys.ENTER);
-
-       //StringSelection s = new StringSelection("C:\\Users\\nilyc\\OneDrive\\Desktop\\resim1.png");
-       // Clipboard copy
-       //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);
-
-       //Robot robot = new Robot();
-       //robot.delay(250);
-       //robot.keyPress(KeyEvent.VK_CONTROL);
-       //robot.keyPress(KeyEvent.VK_V);
-       //robot.keyRelease(KeyEvent.VK_V);
-       //robot.keyRelease(KeyEvent.VK_CONTROL);
-       //robot.keyPress(KeyEvent.VK_ENTER);
-       //robot.delay(100);
-       //robot.keyRelease(KeyEvent.VK_ENTER);
 
     }
 
@@ -161,12 +146,16 @@ public class Customer_StepDefinitions extends BasePage {
 
     @Then("create,import,kanban and list buttons are displayed and user is able click to them.")
     public void createImportKanbanAndListButtonsAreDisplayedAndUserIsAbleClickToThem() {
+       BrowserUtils.sleep(3);
        customerPage.createButton.click();
        Driver.getDriver().navigate().back();
+       BrowserUtils.sleep(3);
        customerPage.importButton.click();
        Driver.getDriver().navigate().back();
+       BrowserUtils.sleep(3);
        customerPage.kanbanButton.click();
        Driver.getDriver().navigate().back();
+       BrowserUtils.sleep(3);
        customerPage.listButton.click();
        Driver.getDriver().navigate().back();
 
