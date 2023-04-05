@@ -24,10 +24,16 @@ public class SurveysPage {
 
     @FindBy(xpath = "//input[@placeholder='Survey Title']")
     public WebElement SurveyTitle;
+
     @FindBy(xpath="//button[@accesskey='s']")
     public WebElement SaveBtn;
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[2]/div[2]/div")
     public WebElement SrvyCreated;
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
+    public WebElement ClickCreateBtn;
+
+    @FindBy(xpath = "//span[@name='title']")
+    public WebElement FirstSurvey;
 
 }
