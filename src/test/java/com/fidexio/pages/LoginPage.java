@@ -21,11 +21,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[.='Log in']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//span[.='POSManager52']")
-    public WebElement posProfileName;
+    // done
 
-    @FindBy(xpath = "//span[.='SalesManager52']")
-    public WebElement salesProfileName;
+
 
 
 
