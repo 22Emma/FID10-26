@@ -2,7 +2,7 @@ package com.fidexio.step_definitions;
 
 import com.fidexio.pages.BasePage;
 import com.fidexio.pages.CustomerPage;
-import com.fidexio.pages.FidexioPage;
+
 import com.fidexio.pages.LoginPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.Driver;
