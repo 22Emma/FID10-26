@@ -12,7 +12,7 @@ Feature:default
     And user clicks to customers from order section and land on the customer page.
 
 
-  @FID10-421
+  @FID10-421 @smoke
   Scenario: AC:1:Verify that all buttons work as expected at the Customers page
     Given user is on the fidexio home page and clicks to the sales option.
     And user clicks to customers from order section and land on the customer page.
