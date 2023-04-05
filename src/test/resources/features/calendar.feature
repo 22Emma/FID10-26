@@ -14,7 +14,7 @@ Feature:
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
 
-  @wipEmma1
+  @wipEmma1 @smoke
   Scenario:AC:1 User first lands on weekly display
     Given User is on fidexio homepage and user clicks to Calendar section.
     When User is on the calender section and weekly display is displayed by default
