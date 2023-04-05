@@ -35,5 +35,36 @@ public class SurveysPage {
 
     @FindBy(xpath = "//span[@name='title']")
     public WebElement FirstSurvey;
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[1]/button[2]")
+    public WebElement DisplayCreateBtn;
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/button")
+    public WebElement AttachmentsBtnDisplayed;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]  ")
+    public WebElement ActionBtnIsDisplayed;
+
+    @FindBy(xpath = "//button[@class= 'btn btn-sm btn-default'][1]")
+    public WebElement TestSurveyDisplayed;
+
+    @FindBy(xpath = "//button[@class= 'btn btn-sm btn-default'][2]")
+    public WebElement PrintSurveyBtn;
+
+    @FindBy(xpath = "//button[@class= 'btn btn-sm btn-default oe_highlight'][2]")
+    public WebElement ShareAndInviteByEmailBtn;
+
+    @FindBy(xpath = "//button[@class= 'btn btn-sm btn-default'][3]")
+    public WebElement ViewResultBtn;
+
+    @FindBy(id = "add-item")
+    public WebElement AddAnItem;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[2]/div[2]/div/p")
+    public WebElement Message;
+
+    @FindBy(xpath = "//button[@aria-label='list']")
+    public WebElement accessList;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/thead/tr/th[2]")
+    public WebElement TitleList;
 
 }
