@@ -1,7 +1,6 @@
 package com.fidexio.step_definitions;
 
 import com.fidexio.pages.BasePage;
-import com.fidexio.pages.FidexioPage;
 import com.fidexio.pages.LoginPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.ConfigurationReader;
@@ -14,7 +13,7 @@ import org.junit.Assert;
 public class Fidexio_login_Definitions extends BasePage{
 
     LoginPage loginPage=new LoginPage();
-    FidexioPage fidexioPage=new FidexioPage();
+
 
     @Given("user is on the fidexio login  page")
     public void user_is_on_the_fidexio_login_page() {
@@ -38,8 +37,6 @@ public class Fidexio_login_Definitions extends BasePage{
     public void user_pos_is_on_the_dashboard() {
         BrowserUtils.sleep(8);
       Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
-//      boolean checkProfile =loginPage.posProfileName.getText().contains("POS");
-//      Assert.assertTrue(checkProfile);
 
 
 
@@ -61,4 +58,6 @@ public class Fidexio_login_Definitions extends BasePage{
 
 
     }
+
+
 }

@@ -2,7 +2,7 @@
 Feature: Default
 
 
-
+    @smoke
 	Scenario: User(pos-manager) can login with valid credentials
 		Given user is on the fidexio login  page
 		 When user(pos) enters "posmanager60@info.com" and "posmanager" as credentials
