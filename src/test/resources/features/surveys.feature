@@ -51,8 +51,9 @@ Feature: Surveys
         When user is on the home  page clicks to the surveys options
         And user clicks to the Create button
         And User must enter a survey title to create a survey.
+        And Add an item is displayed
         And  User click to Save button
-      # Then Add an item should be not displayed.
+      Then Add an item should be not displayed.
 
         Scenario: 6. User can choose "User can come back in the previous page"
         and/or "Login required" under the Options tab.
@@ -61,7 +62,7 @@ Feature: Surveys
           And user clicks to the Create button
           And User must enter a survey title to create a survey.
          And  User click to Save button
-         #Then  User can choose "User can come back in the previous page
+         Then  User can choose "User can come back in the previous page
 
          Scenario: 7. "Survey created" message should be displayed under the survey form sheet,
           after clicked the save button.
