@@ -75,6 +75,7 @@ public class VehiclesFuelLogs_Definition {
         BrowserUtils.sleep(2);
         Assert.assertTrue(vehiclesFuelLogs_pages.createVehiclePopup.isDisplayed());
 
+
     }
 
 
@@ -308,6 +309,8 @@ public class VehiclesFuelLogs_Definition {
         boolean checkWarningMessage = vehiclesFuelLogs_pages.theFollowingFieldsAreInvalid.getText().contains(odometerValue);
         Assert.assertTrue(checkWarningMessage);
         BrowserUtils.sleep(2);
+
+
 
 
     }

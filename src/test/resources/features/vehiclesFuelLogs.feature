@@ -23,7 +23,7 @@ Feature:
     And user click the Save button
     Then the new fuel log should be saved successfully
 
-
+  @smoke
   Scenario: User must choose at least a Vehicle to create a Vehicles Fuel Log.
     When user click Vehicle box and click Search More button
     And user should select a vehicle
