@@ -31,8 +31,8 @@ public class VehicleContractsStepDefinition {
         Assert.assertTrue(VehicleContractsPage.VehiclesContractsTitle.isDisplayed());
 
     }
-    @When("user clicks Create button")
-    public void user_clicks_create_button() {
+    @When("user clicks Create button on Vehicle Services Logs")
+    public void user_clicks_create_button_on_Vehicle_Services_Logs() {
 
 
         wait.until(ExpectedConditions.elementToBeClickable(VehicleContractsPage.CreateBtn));
