@@ -1,3 +1,4 @@
+@EmmaWip
 Feature:
 
   1. User first lands on weekly display
