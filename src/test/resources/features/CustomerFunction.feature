@@ -1,6 +1,6 @@
 Feature:default
   Background:
-    @wip
+
      Scenario: User(sales-manager) can login with valid credentials
     Given user is on the fidexio login  page
     When user(sales) enters "salesmanager52@info.com" and "salesmanager" as credentials
@@ -16,7 +16,7 @@ Feature:default
     And user clicks to customers from order section and land on the customer page.
     Then create,import,kanban and list buttons are displayed and user is able click to them.
 
-  @wip
+
   Scenario: AC:2:The user can create a customer with entering only Name input box.
     Given user is on the fidexio home page and clicks to the sales option.
     And user clicks to customers from order section and land on the customer page.

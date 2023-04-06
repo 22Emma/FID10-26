@@ -1,74 +1,88 @@
 package com.fidexio.pages;
 
 import com.fidexio.utilities.Driver;
-import io.cucumber.java.zh_cn.假如;
-import org.bouncycastle.pqc.crypto.ExchangePair;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CostFunctionPage {
-
-    public CostFunctionPage (){
+    public CostFunctionPage(){
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-    @FindBy(xpath = "//span[normalize-space(.)='Vehicle Costs']")
-    public WebElement vehicleCost;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/div[21]/ul[1]/li[3]/a")
+    public WebElement vehicleCostBtn;
 
-    @FindBy(xpath = "//div[@class='o_list_buttons']/button[1]")
-    public WebElement createButton;
+    @FindBy(xpath = "//input[@class='o_input ui-autocomplete-input']")
+    public WebElement vehicleDropDown;
 
-    @FindBy(xpath = "//div[@class='o_input_dropdown']/input[1]")
-    public WebElement vehicleName;
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[2]")
+    public WebElement typeBtn;
 
-    @FindBy(xpath ="(//div[@class='o_input_dropdown'])[4]//input[1]")
-    public WebElement modelName;
+    @FindBy(xpath = "//a[.='Calculation Benefit In Kind']")
+    public WebElement readyType;
 
-    @FindBy(xpath = "(//div[@class='modal-footer'])[2]/button[1]")
-    public WebElement createModelSaveButton;
+    @FindBy(xpath = "//li[.='Vehicle Costs']")
+    public WebElement vehicleCostInfoPage;
 
-    @FindBy(xpath = "(//li[@class='o_m2o_dropdown_option ui-menu-item'])[1]/a")
-    public WebElement createButtonOnVehicle;
+    @FindBy(xpath = "//h4[.='Create: Vehicle']")
+    public WebElement createVehiclePopup;
 
-    @FindBy(xpath = "(//li[@class='o_m2o_dropdown_option ui-menu-item'])[3]/a")
-    public WebElement createVehicleCreateButton;
+    @FindBy(xpath = "//a[.='Search More...']")
+    public WebElement searchMoreBtn;
 
-    @FindBy(xpath = "//input[@id='o_field_input_226']")
-    public WebElement licensePlate;
+    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    public WebElement searchInputBox;
 
     @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
-    public WebElement saveButton;
+    public WebElement searchCreateBtn;
 
-    @FindBy(xpath = "//input[@class='o_field_char o_field_widget o_input']")
-    public WebElement costDescription;
-    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary'][1]")
-    public WebElement createPopupButton;
+    @FindBy(css = "button.btn.btn-primary.btn-sm.o_list_button_add")
+    public WebElement createNewBtn;
 
-    @FindBy(xpath = "(//div[@class='o_form_sheet'])[1]")
-    public WebElement formSheet;
-    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[8]")
-    public WebElement makeButton;
+    @FindBy(xpath = "//li[.='Create and Edit...']")
+    public WebElement createBtn;
 
-    @FindBy(xpath = "//li[@class='o_m2o_dropdown_option ui-menu-item']//a[.='Create and Edit...']")
-    public WebElement modelCreateButton;
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[1]")
+    public WebElement vehicle_input_box;
 
-    @FindBy(xpath = "(//a[.='Create and Edit...'])[2]")
-    public WebElement createAndEdit2;
+    @FindBy(xpath = "(//input[@class='o_input ui-autocomplete-input'])[2]")
+    public WebElement vehicle_type;
 
-    @FindBy(xpath = "//input[@class='o_field_char o_field_widget o_input o_required_modifier']")
-    public WebElement modelName2;
+    @FindBy(xpath = "(//button[normalize-space()='Save'])[1]")
+    public WebElement save_button;
+
+    @FindBy(css = ".o_notification.undefined.o_error")
+    public WebElement warningMsg;
+
+    @FindBy(xpath = "//button[@accesskey='a']")
+    public WebElement edit_button;
+
+    @FindBy(xpath = "//div[.='Cost Details']")
+    public WebElement costDetailsEditPage;
+
+    @FindBy(xpath = "//button[@accesskey='j']")
+    public WebElement discard_button;
+
+    @FindBy(xpath = "//input[@class='o_field_float o_field_number o_field_widget o_input']")
+    public WebElement total_price;
+
+    @FindBy(id = "o_field_input_46")
+    public WebElement cost_description_input;
+
+    @FindBy(xpath = "//div[@class='modal-footer']/button[1]")
+    public WebElement create_button2;
+
+    @FindBy(css = ".btn.btn-primary.btn-sm.o_form_button_edit")
+    public WebElement create_and_edit_button;
+    @FindBy(xpath = "(//a[.='Bmw/520ES/01adana01'])[1]")
+    public WebElement selectFromDropDown;
+
+    @FindBy(xpath = "//button[normalize-space()='Create']")
+    public WebElement create2Buttonn;
+
+    @FindBy(xpath = "//span[@name='amount']")
+    public WebElement totalPriceInput;
 
 
-    @FindBy(xpath = "(//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content'])[1]")
-    public WebElement acababune;
 
-    @FindBy(xpath = "//h2/input[@class='o_field_char o_field_widget o_input o_required_modifier oe_inline']")
-    public WebElement licencePlate;
-
-    @FindBy (xpath = "//button[@class='btn btn-sm btn-primary']")
-    public WebElement vehichleSave;
-
-    @FindBy (xpath = "(//button//span)[28]")
-    public WebElement MakeSave;
 }
