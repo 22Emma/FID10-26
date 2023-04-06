@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class Driver {
     static String browser;
@@ -62,6 +63,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
