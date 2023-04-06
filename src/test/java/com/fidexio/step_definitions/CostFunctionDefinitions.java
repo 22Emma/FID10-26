@@ -2,7 +2,6 @@ package com.fidexio.step_definitions;
 
 import com.fidexio.pages.BasePage;
 import com.fidexio.pages.CostFunctionPage;
-import com.fidexio.pages.FidexioPage;
 import com.fidexio.utilities.BrowserUtils;
 import com.fidexio.utilities.Driver;
 import io.cucumber.java.en.And;
