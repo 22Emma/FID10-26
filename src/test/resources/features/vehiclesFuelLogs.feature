@@ -35,7 +35,7 @@ Feature:
     When user click Vehicle box
     When user enter Vehicle box "Toyota"
     And user click the Save button
-    Then Create a Vehicle popup should be displayed.
+    Then Create a Vehicle popup should be displayed in the vehicle fuel logs.
 
   Scenario: After clicked the save button, the information of the Vehicles Fuel Log Details which user entered should be displayed.
     When user click Vehicle box and click Search More button

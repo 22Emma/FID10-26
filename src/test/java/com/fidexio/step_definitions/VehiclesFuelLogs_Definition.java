@@ -70,7 +70,7 @@ public class VehiclesFuelLogs_Definition {
     }
 
 
-    @Then("Create a Vehicle popup should be displayed.")
+    @Then("Create a Vehicle popup should be displayed in the vehicle fuel logs.")
     public void createAVehiclePopupShouldBeDisplayed() {
         BrowserUtils.sleep(2);
         Assert.assertTrue(vehiclesFuelLogs_pages.createVehiclePopup.isDisplayed());
@@ -304,16 +304,13 @@ public class VehiclesFuelLogs_Definition {
 
     @Then("user sees {string} warning message")
     public void userSeesWarningMessage(String odometerValue) {
-BrowserUtils.sleep(2);
-       boolean checkWarningMessage=vehiclesFuelLogs_pages.theFollowingFieldsAreInvalid.getText().contains(odometerValue);
-    Assert.assertTrue(checkWarningMessage);
-    BrowserUtils.sleep(2);
-
-
+        BrowserUtils.sleep(2);
+        boolean checkWarningMessage = vehiclesFuelLogs_pages.theFollowingFieldsAreInvalid.getText().contains(odometerValue);
+        Assert.assertTrue(checkWarningMessage);
+        BrowserUtils.sleep(2);
 
 
     }
-
 
 
 }
