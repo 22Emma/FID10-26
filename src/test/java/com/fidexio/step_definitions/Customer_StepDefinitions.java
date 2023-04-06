@@ -55,7 +55,7 @@ public class Customer_StepDefinitions extends BasePage {
 
     @Then("create contacts should be display.")
     public void create_contacts_should_be_display() {
-       System.out.println("customerPage.contactPage.isDisplayed() = " + customerPage.contactPage.isDisplayed());
+      customerPage.contactPage.isDisplayed();
     }
 
     @Then("user enters the contact name into the contact name box.")
@@ -82,31 +82,31 @@ public class Customer_StepDefinitions extends BasePage {
     @Then("{string} message appears under full profile and customer's name is displayed on the page title.")
     public void message_appears_under_full_profile_and_customer_s_name_is_displayed_on_the_page_title(String string) {
        BrowserUtils.sleep(3);
-       System.out.println("customerPage.contactCreated.isDisplayed() = " + customerPage.contactCreated.isDisplayed());
+       customerPage.contactCreated.isDisplayed();
     }
 
 
     @Then("user sees the created customer on the list.")
     public void userSeesTheCreatedCustomerOnTheList() {
-       System.out.println("customerPage.customerIsOnThePage.isDisplayed() = " + customerPage.customerIsOnThePage.isDisplayed());
+       customerPage.customerIsOnThePage.isDisplayed();
     }
 
     @Then("information of the customer is displayed.")
     public void informationOfTheCustomerIsDisplayed() {
        BrowserUtils.sleep(3);
-       System.out.println("customerPage.customerInfo.isDisplayed() = " + customerPage.customerInfo.isDisplayed());
+       customerPage.customerInfo.isDisplayed();
     }
 
     @And("create button is displayed instead of discard button.")
     public void createButtonIsDisplayedInsteadOfDiscardButton() {
        BrowserUtils.sleep(3);
-       System.out.println("customerPage.createButtonInsteadOfDiscard.isDisplayed() = " + customerPage.createButtonInsteadOfDiscard.isDisplayed());
+        customerPage.createButtonInsteadOfDiscard.isDisplayed();
     }
 
     @Then("edit button is displayed instead of save button")
     public void editButtonIsDisplayedInsteadOfSaveButton() {
        BrowserUtils.sleep(3);
-       System.out.println("customerPage.editButton.isDisplayed() = " + customerPage.editButton.isDisplayed());
+       customerPage.editButton.isDisplayed();
     }
 
     @Then("user hover overs on the profile picture and clicks to bin icon.")
@@ -159,10 +159,10 @@ public class Customer_StepDefinitions extends BasePage {
        customerPage.listButton.click();
        Driver.getDriver().navigate().back();
 
-       System.out.println("customerPage.createButton.isDisplayed() = " + customerPage.createButton.isDisplayed());
-       System.out.println("customerPage.importButton.isDisplayed() = " + customerPage.importButton.isDisplayed());
-       System.out.println("customerPage.kanbanButton.isDisplayed() = " + customerPage.kanbanButton.isDisplayed());
-       System.out.println("customerPage.listButton.isDisplayed() = " + customerPage.listButton.isDisplayed());
+       customerPage.createButton.isDisplayed();
+       customerPage.importButton.isDisplayed();
+       customerPage.kanbanButton.isDisplayed();
+       customerPage.listButton.isDisplayed();
 
     }
 
