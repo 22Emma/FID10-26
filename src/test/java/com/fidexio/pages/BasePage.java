@@ -66,8 +66,7 @@ public abstract class BasePage {
     @FindBy(xpath = "(//span[normalize-space(.)='Leaves'])[1]")
     public WebElement sectionLeaves;
 
-    @FindBy(xpath = "//a[.='More ']")
-    public WebElement sectionMore;
+
 
     @FindBy(xpath = "(//span[normalize-space(.)='Events'])[1]")
     public WebElement MoreEvents;
@@ -103,4 +102,6 @@ public abstract class BasePage {
     public WebElement MoreDashboard;
 
 
+    @FindBy(xpath = "//a[.='More ']")
+    public WebElement sectionMore;
 }
