@@ -55,7 +55,7 @@ public class SurveysPage {
     @FindBy(xpath = "//button[@class= 'btn btn-sm btn-default'][3]")
     public WebElement ViewResultBtn;
 
-    @FindBy(id = "add-item")
+    @FindBy(xpath = "//table/tbody/tr[1]/td/a")
     public WebElement AddAnItem;
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[2]/div[2]/div/p")
