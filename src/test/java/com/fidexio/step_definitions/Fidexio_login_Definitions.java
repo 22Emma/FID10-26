@@ -35,7 +35,7 @@ public class Fidexio_login_Definitions extends BasePage{
 
     @Then("user\\(pos) is on the dashboard")
     public void user_pos_is_on_the_dashboard() {
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(8);
       Assert.assertEquals("#Inbox - Odoo",Driver.getDriver().getTitle());
 
 

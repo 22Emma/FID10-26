@@ -69,11 +69,13 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
@@ -110,10 +112,11 @@ public class Driver {
         return driver;
     }
 
-    public static void closeDriver() {
+  /* public static void closeDriver() {
         if (driver != null) {
             driver.quit();
             driver = null;
+
+
+   */
         }
-    }
-}

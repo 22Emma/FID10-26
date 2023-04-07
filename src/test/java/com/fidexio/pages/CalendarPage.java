@@ -38,7 +38,7 @@ public class CalendarPage {
     @FindBy(xpath = "//button[.='Cancel']")
     public WebElement cancelButton;
 
-    @FindBy(xpath = "//li[.='Meetings (Week 13)']")
+    @FindBy(xpath = "//li[.='Meetings (Week 14)']")
     public WebElement weekTitle;
 
     @FindBy(xpath = "//ol//li")
