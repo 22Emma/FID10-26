@@ -83,3 +83,4 @@ Feature: Surveys
   after clicking the Surveys module.
     When user is on the home  page clicks to the surveys options
     And Verify that the user should be able to s ee created survey is listed
+   
