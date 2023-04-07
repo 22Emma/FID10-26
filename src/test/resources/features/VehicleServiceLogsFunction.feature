@@ -1,3 +1,4 @@
+@FID10-487
 Feature: Fidexio Vehicle Service Logs functionality
   Agile story: As a posManager, I should be able to create new Vehicles  Service Logs.
 
@@ -21,7 +22,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     Then user should land on the vehicles services logs page
 
 
-
+  @FID10-477 @smoke
   Scenario: (AC-1): Verify that USER can create a new Vehicles Services Logs
     Given user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -30,6 +31,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     Then user should see their vehicles service log
 
 
+  @FID10-478
   Scenario: (AC-2): User must choose at least a Vehicle to create a Vehicles Services Log - positive
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -37,6 +39,8 @@ Feature: Fidexio Vehicle Service Logs functionality
     And user enters the total price fee and clicks the save button
     Then user should see their vehicles service log
 
+
+  @FID10-479
   Scenario: (AC-2): User must choose at least a Vehicle to create a Vehicles Services Log - negative
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -44,6 +48,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     Then user should not be able see their vehicles service log
 
 
+  @FID10-480
   Scenario: (AC-3): If user tries to enter a vehicle which is not on the Vehicle list and click the save button,
   Create a Vehicle popup should be displayed
     When user is on the fidexio vehicles services logs page
@@ -54,6 +59,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     Then create a vehicle popup should be displayed
 
 
+  @FID10-481
   Scenario: (AC-4): After clicked the save button, the information of the Service Details which user entered should be displayed.
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -65,6 +71,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     Then user should see their vehicles service log
 
 
+  @FID10-482
   Scenario: (AC-5): After clicked the Save button, Edit button display instead of Save button and Create button display instead of Discard button.
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -74,6 +81,7 @@ Feature: Fidexio Vehicle Service Logs functionality
     And user should see the create button
 
 
+  @FID10-483
   Scenario: (AC-6): When user clicks the Edit button the form should open by displaying the all the information and it be ready to edit.
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
@@ -82,19 +90,22 @@ Feature: Fidexio Vehicle Service Logs functionality
     And user clicks the edit button.
     Then user should be able to see all the information and be able to edit it
 
-    Scenario Outline: (AC-7): User should be able to enter only number in the Total Price input box. And it should be displayed as a float number.
-      When user is on the fidexio vehicles services logs page
-      And user clicks the create button
-      Then user selects a vehicle
-      When the user enters "<total price fee>" for total price fee
-      Then only float numbers should be accepted as total price fee
-      Examples:
+
+  @FID10-484
+  Scenario Outline: (AC-7): User should be able to enter only number in the Total Price input box. And it should be displayed as a float number.
+    When user is on the fidexio vehicles services logs page
+    And user clicks the create button
+    Then user selects a vehicle
+    When the user enters "<total price fee>" for total price fee
+    Then only float numbers should be accepted as total price fee
+    Examples:
       | total price fee |
       | invalid entry   |
       | 60              |
       | 500.00          |
 
 
+  @FID10-485
   Scenario: (AC-8): Service Type should display as "Repair and Maintenance" by default.
     When user is on the fidexio vehicles services logs page
     And user clicks the create button
